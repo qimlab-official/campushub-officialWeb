@@ -33,4 +33,4 @@ Disallow:
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://postalhub.my/sitemap.xml
+Sitemap: https://campushub.my/sitemap.xml
