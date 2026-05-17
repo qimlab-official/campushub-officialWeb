@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="utf-8">
@@ -23,889 +23,689 @@
   <link href="assets/img/logo/icon-512.png" rel="icon">
   <link href="assets/img/logo/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo/icon-512.png" alt="Campus Hub Logo">
-        <h1 class="sitename">Campus Hub</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-              <div class="company-badge mb-4">
-                <i class="bi bi-diagram-3-fill me-2"></i>
-                Connecting Your Campus
-              </div>
-
-              <h1 class="mb-4">
-                The Ultimate <br>
-                Campus Ecosystem <br>
-                <span class="accent-text">For Students & Staff</span>
-              </h1>
-
-              <p class="mb-4 mb-md-5">
-                Campus Hub is a comprehensive SaaS ecosystem connecting university stakeholders. Access parcel
-                management, cloud retail POS, printing, and point reward programs all in one place.
-              </p>
-
-              <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                <a href="https://youtu.be/ie5cPVMTmYU?si=ZNTdCu8-XTW3iZ5z" class="btn btn-link mt-2 mt-sm-0 glightbox">
-                  <i class="bi bi-play-circle me-1"></i>
-                  Play Video
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-              <img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
-
-              <div class="customers-badge">
-                <div class="customer-avatars">
-                  <img src="assets/img/avatar-1.webp" alt="Customer 1" class="avatar">
-                  <img src="assets/img/avatar-2.webp" alt="Customer 2" class="avatar">
-                  <img src="assets/img/avatar-3.webp" alt="Customer 3" class="avatar">
-                  <img src="assets/img/avatar-4.webp" alt="Customer 4" class="avatar">
-                  <img src="assets/img/avatar-5.webp" alt="Customer 5" class="avatar">
-                  <span class="avatar more">12+</span>
-                </div>
-                <p class="mb-0 mt-2">125,000+ managed parcels</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 align-items-center justify-content-between">
-          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
-            <span class="about-meta">ABOUT CAMPUS HUB</span>
-            <h2 class="about-title">Connecting students and services seamlessly</h2>
-            <p class="about-description">Campus Hub is an all-in-one SaaS platform dedicated to revolutionizing
-              university and campus life. We provide integrated solutions for parcel management, local retail, printing,
-              and student rewards.</p>
-            <div class="row feature-list-wrapper">
-              <div class="col-md-6">
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Postal Hub Management</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Nexo Cloud POS</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Campus Hub App</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Printing & 3D Printing</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Point Rewards Program</li>
-                  <li><i class="bi bi-check-circle-fill"></i> More coming soon</li>
-                </ul>
-              </div>
-            </div>
-
-
-          </div>
-
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="image-wrapper">
-              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                <img src="assets/img/about-5.webp" alt="Campus Life" class="img-fluid main-image rounded-4">
-                <img src="assets/img/about-2.webp" alt="Students" class="img-fluid small-image rounded-4">
-              </div>
-              <div class="experience-badge floating">
-                <h3>SaaS <span>Platform</span></h3>
-                <p>For campus ecosystem</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Our Products</h2>
-        <p>Explore the core products that make up the Campus Hub ecosystem</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="d-flex justify-content-center">
-
-          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-
-            <li class="nav-item">
-              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
-                <h4>Postal Hub</h4>
-              </a>
-            </li><!-- End tab nav item -->
-
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
-                <h4>Nexo POS</h4>
-              </a><!-- End tab nav item -->
-
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
-                <h4>Campus Hub App</h4>
-              </a>
-            </li><!-- End tab nav item -->
-
-          </ul>
-
-        </div>
-
-        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="tab-pane fade active show" id="features-tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Postal Hub Management System</h3>
-                <p class="fst-italic">
-                  A dedicated system for internal parcel management designed specifically for campus environments.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Efficient parcel logging and tracking for students and
-                      staff.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Automated notifications for parcel arrivals and
-                      collections.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Secure and organized handling of thousands of packages
-                      daily.</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-1.webp" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End tab content item -->
-
-          <div class="tab-pane fade" id="features-tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Nexo Cloud Retail POS</h3>
-                <p class="fst-italic">
-                  A cloud-based Point of Sale system tailored for local campus retailers and sellers.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Seamless inventory management and sales tracking.</span>
-                  </li>
-                  <li><i class="bi bi-check2-all"></i> <span>Integration with the Campus Hub point reward
-                      program.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Easy-to-use interface for fast checkouts and
-                      reporting.</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-2.webp" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End tab content item -->
-
-          <div class="tab-pane fade" id="features-tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Campus Hub All-in-One App</h3>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Connects university stakeholders to all ecosystem
-                      services.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Access printing and 3D printing services directly from the
-                      app.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Track points, rewards, and parcel status in
-                      real-time.</span></li>
-                </ul>
-                <p class="fst-italic">
-                  The central hub for students, faculty, and staff to interact with campus services efficiently.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-3.webp" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End tab content item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-    <!-- Features Cards Section -->
-    <section id="features-cards" class="features-cards section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="feature-box orange">
-              <i class="bi bi-box-seam"></i>
-              <h4>Parcel Management</h4>
-              <p>Streamlined internal logistics for students and campus staff with live tracking and notifications.</p>
-            </div>
-          </div><!-- End Feature Borx-->
-
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="feature-box blue">
-              <i class="bi bi-shop"></i>
-              <h4>Nexo Cloud POS</h4>
-              <p>Empower local campus retailers with an easy-to-use cloud point of sale system.</p>
-            </div>
-          </div><!-- End Feature Borx-->
-
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-box green">
-              <i class="bi bi-printer"></i>
-              <h4>Printing & 3D Printing</h4>
-              <p>Convenient access to university printing services directly from the Campus Hub app.</p>
-            </div>
-          </div><!-- End Feature Borx-->
-
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="feature-box red">
-              <i class="bi bi-star"></i>
-              <h4>Point Rewards</h4>
-              <p>Earn points for every transaction and redeem them for exciting campus rewards.</p>
-            </div>
-          </div><!-- End Feature Borx-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Cards Section -->
-
-    <!-- Features 2 Section -->
-    <section id="features-2" class="features-2 section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-
-          <div class="col-lg-4">
-
-            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Use On Any Device</h3>
-                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui
-                    quis mi consectetuer lacinia.</p>
-                </div>
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-display"></i>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Feather Icons</h3>
-                  <p>Phasellus ullamcorper ipsum rutrum nunc nunc nonummy metus vestibulum volutpat sapien arcu sed
-                    augue aliquam erat volutpat.</p>
-                </div>
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-feather"></i>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Retina Ready</h3>
-                  <p>Aenean tellus metus bibendum sed posuere ac mattis non nunc vestibulum fringilla purus sit amet
-                    fermentum aenean commodo.</p>
-                </div>
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-eye"></i>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-          </div>
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="phone-mockup text-center">
-              <img src="assets/img/phone-app-screen.webp" alt="Phone Mockup" class="img-fluid">
-            </div>
-          </div><!-- End Phone Mockup -->
-
-          <div class="col-lg-4">
-
-            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-code-square"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>W3c Valid Code</h3>
-                  <p>Donec vitae sapien ut libero venenatis faucibus nullam quis ante etiam sit amet orci eget eros
-                    faucibus tincidunt.</p>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-phone"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Fully Responsive</h3>
-                  <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem
-                    neque sed ipsum.</p>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-browser-chrome"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Browser Compatibility</h3>
-                  <p>Nullam dictum felis eu pede mollis pretium integer tincidunt cras dapibus vivamus elementum semper
-                    nisi aenean vulputate.</p>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Features 2 Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row content justify-content-center align-items-center position-relative">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="display-4 mb-4">Join the Campus Hub Ecosystem</h2>
-            <p class="mb-4">Whether you are a student, a campus retailer, or a university administrator, Campus Hub
-              provides the tools you need to connect and thrive.</p>
-            <a href="#contact" class="btn btn-cta">Contact Us</a>
-          </div>
-
-          <!-- Abstract Background Elements -->
-          <div class="shape shape-1">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z"
-                transform="translate(100 100)"></path>
-            </svg>
-          </div>
-
-          <div class="shape shape-2">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z"
-                transform="translate(100 100)"></path>
-            </svg>
-          </div>
-
-          <!-- Dot Pattern Groups -->
-          <div class="dots dots-1">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
-              </pattern>
-              <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
-            </svg>
-          </div>
-
-          <div class="dots dots-2">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
-              </pattern>
-              <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
-            </svg>
-          </div>
-
-          <div class="shape shape-3">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z"
-                transform="translate(100 100)"></path>
-            </svg>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Call To Action Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
           },
-          "slidesPerView": "auto",
-          "centeredSlides": true, 
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6', // Teal
+              600: '#0d9488',
+              900: '#134e4a',
+            },
+            nexo: {
+              500: '#a855f7', // Purple
+            },
+            postal: {
+              500: '#3b82f6', // Blue
+            },
+            bg: '#09090b',
+            surface: '#18181b',
+            border: '#27272a'
           },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 2,
-              "spaceBetween": 40,
-              "centeredSlides": true
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'marquee': 'marquee 30s linear infinite',
+            'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
             },
-            "480": {
-              "slidesPerView": 3,
-              "spaceBetween": 60,
-              "centeredSlides": true
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-100%)' },
             },
-            "640": {
-              "slidesPerView": 4,
-              "spaceBetween": 80,
-              "centeredSlides": true
-            },
-            "992": {
-              "slidesPerView": 6,
-              "spaceBetween": 120,
-              "centeredSlides": false
+            'pulse-glow': {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: .5 },
             }
           }
         }
-      </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/utp.webp" class="img-fluid"
-                alt="Universiti Teknologi PETRONAS"></div>
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body class="antialiased relative selection:bg-brand-500 selection:text-white">
+
+  <!-- Ambient Background Lighting -->
+  <div class="fixed inset-0 bg-grid z-[-2] pointer-events-none"></div>
+  <div class="glow-blob bg-brand-500 w-[600px] h-[600px] top-[-20%] left-[-10%]"></div>
+  <div class="glow-blob bg-nexo-500 w-[500px] h-[500px] bottom-[10%] right-[-10%]"></div>
+  <div class="glow-blob bg-postal-500 w-[400px] h-[400px] top-[40%] left-[20%] opacity-10"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="glass rounded-2xl px-4 py-3 flex justify-between items-center shadow-lg">
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-8 h-8 rounded-lg bg-gradient-to-br from-white to-white flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(138,87,204,0.4)]">
+            <img class="w-8 h-8" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
           </div>
-          <div class="swiper-pagination"></div>
+          <span class="font-display font-bold text-xl text-white tracking-tight">Campus Hub</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#ecosystem"
+            class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Ecosystem</a>
+          <a href="#cross-campus"
+            class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Cross-Campus Roaming</a>
+          <a href="#contact" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Contact</a>
         </div>
 
-      </div>
-
-    </section>
-    <!-- /Clients Section -->
-
-
-
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="6000" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Plus Users</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="125000" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Plus Managed Parcels</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p>Outlets in Malaysia</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-activity"></i>
-              </div>
-              <div>
-                <h3>Nesciunt Mete</h3>
-                <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure
-                  perferendis tempore et consequatur.</p>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-diagram-3"></i>
-              </div>
-              <div>
-                <h3>Eosle Commodi</h3>
-                <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
-                  nesciunt dolorem.</p>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-easel"></i>
-              </div>
-              <div>
-                <h3>Ledo Markt</h3>
-                <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
-                  eos earum corrupti.</p>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-clipboard-data"></i>
-              </div>
-              <div>
-                <h3>Asperiores Commodit</h3>
-                <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
-                  adipisci neque.</p>
-              </div>
-            </div>
-          </div><!-- End Service Card -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-
-
-    <!-- Faq Section -->
-    <section class="faq-9 faq section light-background" id="faq">
-
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-5" data-aos="fade-up">
-            <h2 class="faq-title">Have a question? Check out the FAQ</h2>
-            <p class="faq-description">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet
-              adipiscing sem neque sed ipsum.</p>
-            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
-              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z"
-                  fill="currentColor"></path>
-              </svg>
-            </div>
-          </div>
-
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
-                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in.
-                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
-                    Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi.
-                    Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- /Faq Section -->
-
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4 g-lg-5">
-          <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-            <h3>Contact Info</h3>
-
-            <div class="row">
-              <!-- Location -->
-              <div class="col-md-4">
-                <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-                  <div class="icon-box">
-                    <i class="bi bi-geo-alt"></i>
-                  </div>
-                  <div class="content">
-                    <h4>Our Location</h4>
-                    <p>Seri Iskandar,</p>
-                    <p>32610 Perak, Malaysia</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Phone -->
-              <div class="col-md-4">
-                <div class="info-item" data-aos="fade-up" data-aos-delay="400">
-                  <div class="icon-box">
-                    <i class="bi bi-telephone"></i>
-                  </div>
-                  <div class="content">
-                    <h4>Phone Number</h4>
-                    <p>+60 11 5676 5004</p>
-
-                  </div>
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div class="col-md-4">
-                <div class="info-item" data-aos="fade-up" data-aos-delay="500">
-                  <div class="icon-box">
-                    <i class="bi bi-envelope"></i>
-                  </div>
-                  <div class="content">
-                    <h4>Email Address</h4>
-                    <p>contact@qimlab.my</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Campus Hub</span>
+        <div class="hidden md:block">
+          <a href="#contact"
+            class="px-5 py-2.5 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            Get Started
           </a>
-          <div class="footer-contact pt-3">
-            <p>Kajang,</p>
-            <p>43000 Selangor, Malaysia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+60 10 504 4177</span></p>
-            <p><strong>Email:</strong> <span>contact@qimlab.my</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Campus Hub</h4>
-          <ul>
-            <li><a href="https://www.campushub.my#home">Home</a></li>
-            <li><a href="https://www.campushub.my#about">About</a></li>
-            <li><a href="https://www.campushub.my#features">Features</a></li>
-            <li><a href="https://www.campushub.my#services">Services</a></li>
-            <li><a href="https://www.campushub.my#contact">Contact</a></li>
+        <button id="mobile-menu-btn" class="md:hidden text-zinc-400 hover:text-white focus:outline-none"
+          aria-label="Menu">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
 
-          </ul>
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu"
+        class="hidden md:hidden mt-2 glass rounded-2xl p-4 flex-col space-y-2 shadow-lg border border-white/5 opacity-0 transition-opacity duration-300">
+        <a href="#ecosystem"
+          class="text-sm font-medium text-zinc-400 hover:text-white transition-colors block px-2 py-2 rounded-lg hover:bg-white/5">Ecosystem</a>
+        <a href="#cross-campus"
+          class="text-sm font-medium text-zinc-400 hover:text-white transition-colors block px-2 py-2 rounded-lg hover:bg-white/5">Cross-Campus
+          Roaming</a>
+        <a href="#contact"
+          class="text-sm font-medium text-zinc-400 hover:text-white transition-colors block px-2 py-2 rounded-lg hover:bg-white/5">Contact</a>
+        <div class="pt-2 mt-2 border-t border-white/10">
+          <a href="#contact"
+            class="px-5 py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition-all text-center block shadow-md">
+            Get Started
+          </a>
         </div>
+      </div>
+    </div>
+  </nav>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
+  <!-- Hero Section -->
+  <section
+    class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex flex-col items-center justify-center min-h-[90vh]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center w-full">
 
-            <li><a href="https://lms.postalhub.my">Logistic Management System (LMS)</a></li>
-            <li><a href="https://tracker.postalhub.my">Tracker</a></li>
-            <li><a href="https://policies.campushub.my">Policies</a></li>
+      <div
+        class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-widest mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+        </span>
+        The Campus Operating System
+      </div>
 
-          </ul>
-        </div>
+      <h1 class="reveal font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 leading-[1.1]">
+        One Superapp.<br>
+        <span class="text-gradient-brand">Endless Possibilities.</span>
+      </h1>
 
+      <p class="reveal text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+        Connect your entire institution. Deliver seamless services, elevate local campus commerce, and redefine the
+        student experience with a single interconnected ecosystem.
+      </p>
 
-
-
-
+      <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#ecosystem"
+          class="bg-white text-black px-8 py-4 rounded-xl font-semibold text-base transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2">
+          Explore the Ecosystem
+        </a>
+        <a href="#contact"
+          class="glass text-white px-8 py-4 rounded-xl font-semibold text-base transition-all hover:bg-white/10 flex items-center justify-center gap-2">
+          Request a Demo
+        </a>
       </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span><strong class="px-1 sitename">Campus Hub.</strong><span>All Rights Reserved</span></p>
-      <div class="credits">
-        A project by <a href="https://qimlab.my">Qim Lab</a>
+    <!-- Floating UI Elements -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-7xl mx-auto">
+      <!-- App Card -->
+      <div
+        class="hidden lg:flex absolute top-[20%] left-[5%] glass-card p-4 rounded-2xl w-64 items-center gap-4 animate-float border-white/10 shadow-2xl"
+        style="animation-delay: 0s;">
+        <div class="w-12 h-12 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 text-xl"><i
+            class="fa-solid fa-print"></i></div>
+        <div>
+          <div class="text-sm font-bold text-white">Cloud Print</div>
+          <div class="text-xs text-zinc-400">Sent to Library Printer</div>
+        </div>
+      </div>
+      <!-- POS Card -->
+      <div
+        class="hidden lg:flex absolute top-[60%] right-[5%] glass-card p-4 rounded-2xl w-64 items-center gap-4 animate-float border-white/10 shadow-2xl"
+        style="animation-delay: -2s;">
+        <div class="w-12 h-12 rounded-full bg-nexo-500/20 flex items-center justify-center text-nexo-500 text-xl"><i
+            class="fa-solid fa-mug-hot"></i></div>
+        <div>
+          <div class="text-sm font-bold text-white">Campus Cafe</div>
+          <div class="text-xs text-zinc-400">+50 Reward Points</div>
+        </div>
+      </div>
+      <!-- Postal Card -->
+      <div
+        class="hidden lg:flex absolute bottom-[10%] left-[15%] glass-card p-4 rounded-2xl w-64 items-center gap-4 animate-float border-white/10 shadow-2xl"
+        style="animation-delay: -4s;">
+        <div class="w-12 h-12 rounded-full bg-postal-500/20 flex items-center justify-center text-postal-500 text-xl"><i
+            class="fa-solid fa-box"></i></div>
+        <div>
+          <div class="text-sm font-bold text-white">Parcel Arrived</div>
+          <div class="text-xs text-zinc-400">Ready at Postal Hub</div>
+        </div>
       </div>
     </div>
+  </section>
 
+  <!-- Features Marquee -->
+  <div class="w-full bg-brand-900/20 border-y border-white/5 py-4 overflow-hidden relative backdrop-blur-sm">
+    <div class="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-bg to-transparent z-10"></div>
+    <div class="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-bg to-transparent z-10"></div>
+
+    <div class="flex w-[200%] animate-marquee">
+      <div
+        class="flex w-1/2 justify-around items-center text-sm font-medium text-brand-100/60 uppercase tracking-widest whitespace-nowrap">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-cube text-brand-500"></i> Parcel Tracking</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-print text-brand-500"></i> Cloud Printing</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-star text-brand-500"></i> Reward System</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-store text-brand-500"></i> Campus
+          Marketplaces</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-cash-register text-brand-500"></i> Cloud POS</span>
+      </div>
+      <div
+        class="flex w-1/2 justify-around items-center text-sm font-medium text-brand-100/60 uppercase tracking-widest whitespace-nowrap">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-cube text-brand-500"></i> Parcel Tracking</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-print text-brand-500"></i> Cloud Printing</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-star text-brand-500"></i> Reward System</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-store text-brand-500"></i> Campus
+          Marketplaces</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-cash-register text-brand-500"></i> Cloud POS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ecosystem Bento Grid Section -->
+  <section id="ecosystem" class="py-32 relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="reveal text-center max-w-3xl mx-auto mb-20">
+        <h2 class="font-display text-3xl md:text-5xl font-bold mb-6">The <span class="text-white">Interconnected</span>
+          Ecosystem</h2>
+        <p class="text-zinc-400 text-lg">Powerful standalone platforms that communicate flawlessly. Eliminate silos and
+          unify the entire campus experience.</p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]">
+
+        <!-- Main App (Spans 2 columns on desktop) -->
+        <div class="reveal md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-brand-500/20 transition-all duration-500">
+          </div>
+
+          <div class="flex flex-col h-full justify-between relative z-10">
+            <div class="flex justify-between items-start mb-8">
+              <div
+                class="w-12 h-12 rounded-xl bg-white border border-white/10 flex items-center justify-center text-brand-400 text-2xl shadow-lg">
+                <img class="w-10 h-10" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
+              </div>
+              <span
+                class="px-3 py-1 bg-brand-500/20 text-brand-300 border border-brand-500/30 rounded-full text-xs font-semibold">Core
+                Superapp</span>
+            </div>
+
+            <div>
+              <h3 class="font-display text-3xl font-bold text-white mb-4">Campus Hub app</h3>
+              <p class="text-zinc-400 text-base max-w-md leading-relaxed mb-6">
+                The centralized entry point for all stakeholders. Manage daily campus life, from tracking parcels and
+                booking cloud-printing to navigating local marketplaces and earning ecosystem-wide rewards.
+              </p>
+              <div class="flex gap-3 flex-wrap">
+                <span class="px-3 py-1.5 bg-zinc-800/50 rounded-lg text-xs text-zinc-300 border border-white/5">Parcel
+                  Tracker</span>
+                <span
+                  class="px-3 py-1.5 bg-zinc-800/50 rounded-lg text-xs text-zinc-300 border border-white/5">Cloud-Printing</span>
+                <span
+                  class="px-3 py-1.5 bg-zinc-800/50 rounded-lg text-xs text-zinc-300 border border-white/5">Marketplaces</span>
+                <span
+                  class="px-3 py-1.5 bg-zinc-800/50 rounded-lg text-xs text-zinc-300 border border-white/5">Rewards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nexo POS -->
+        <div class="reveal md:col-span-1 glass-card rounded-3xl p-8 relative overflow-hidden group"
+          style="transition-delay: 100ms;">
+          <div
+            class="absolute top-0 right-0 w-48 h-48 bg-nexo-500/10 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-nexo-500/20 transition-all duration-500">
+          </div>
+
+          <div class="flex flex-col h-full justify-between relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-white border border-white/10 flex items-center justify-center text-nexo-400 text-xl shadow-lg mb-8">
+              <img class="w-10 h-10" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
+            </div>
+
+            <div>
+              <h3 class="font-display text-2xl font-bold text-white mb-3">Nexo POS</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Cloud POS system designed specifically for campus mini-markets, cafes, and retail. Elevate the local
+                economy with direct integration into the Campus Hub reward point system.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Postal Management -->
+        <div class="reveal md:col-span-1 glass-card rounded-3xl p-8 relative overflow-hidden group"
+          style="transition-delay: 200ms;">
+          <div
+            class="absolute top-0 right-0 w-48 h-48 bg-postal-500/10 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-postal-500/20 transition-all duration-500">
+          </div>
+
+          <div class="flex flex-col h-full justify-between relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-white border border-white/10 flex items-center justify-center text-postal-400 text-xl shadow-lg mb-8">
+              <img class="w-10 h-10" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
+            </div>
+
+            <div>
+              <h3 class="font-display text-2xl font-bold text-white mb-3">Postal Hub</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Solves the last-mile problem. Replaces door-to-door delivery with a central parcel hub. Students earn
+                rewards for prompt pickups, integrated directly into their main app.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coming Soon (Spans 2 columns) -->
+        <div
+          class="reveal md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden flex items-center justify-center border-dashed border-white/10 bg-zinc-900/30"
+          style="transition-delay: 300ms;">
+          <div class="text-center relative z-10">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-zinc-800/50 mb-4 border border-white/5 animate-pulse-glow">
+              <i class="fa-solid fa-code-branch text-zinc-500 text-xl"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-zinc-300 mb-2">Expanding the Ecosystem</h3>
+            <p class="text-zinc-500 text-sm max-w-sm mx-auto">New integrated services and applications are currently in
+              development.</p>
+            <div
+              class="mt-4 inline-block px-3 py-1 bg-white/5 text-zinc-400 rounded text-xs font-mono tracking-wider uppercase">
+              Coming Soon
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Campus Section -->
+  <section id="cross-campus" class="py-32 border-y border-white/5 bg-zinc-900/20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Text Content -->
+        <div class="reveal order-2 lg:order-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-nexo-500/10 text-nexo-400 text-xs font-bold uppercase tracking-widest mb-6 border border-nexo-500/20">
+            <i class="fa-solid fa-network-wired"></i> Global Architecture
+          </div>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Truly <span
+              class="text-white">Cross-Campus</span> Compatible</h2>
+          <p class="text-zinc-400 text-lg mb-8 leading-relaxed">
+            A student's life isn't confined to one location. Our architecture allows seamless roaming between any campus
+            in the Campus Hub network.
+          </p>
+
+          <ul class="space-y-6">
+            <li
+              class="flex items-start gap-4 p-4 rounded-2xl glass hover:bg-white/[0.02] transition-colors border border-white/5">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-nexo-500/20 flex items-center justify-center text-nexo-400 mt-1">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold mb-1">Universal Wallet & Rewards</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">Earn points at your home campus, spend them at a Nexo
+                  POS mini-mart in a partnered university across town.</p>
+              </div>
+            </li>
+            <li
+              class="flex items-start gap-4 p-4 rounded-2xl glass hover:bg-white/[0.02] transition-colors border border-white/5">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 mt-1">
+                <i class="fa-solid fa-id-badge"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold mb-1">Single Identity</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">One app login rules them all. Access market places and
+                  cafes instantly wherever the ecosystem exists.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Important Disclaimer -->
+          <div class="mt-8 p-5 rounded-2xl bg-postal-500/10 border border-postal-500/20 flex gap-4 items-start">
+            <i class="fa-solid fa-circle-info text-postal-400 mt-1"></i>
+            <p class="text-postal-100 text-sm leading-relaxed">
+              <strong class="text-postal-300 block mb-1">Postal Hub Restriction</strong>
+              While wallets and IDs roam freely, the <strong>Postal Management System</strong> remains strictly
+              localized. Parcels are processed only at the specific campus Hub matching the delivery address.
+            </p>
+          </div>
+        </div>
+
+        <!-- Network Visual Representation -->
+        <div class="reveal order-1 lg:order-2 relative h-[500px] flex items-center justify-center w-full">
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-brand-500/10 to-nexo-500/10 rounded-full blur-3xl opacity-50">
+          </div>
+
+          <!-- SVG Connection Lines -->
+          <svg class="absolute inset-0 w-full h-full z-0" style="pointer-events: none;">
+            <line x1="50%" y1="50%" x2="20%" y2="20%" stroke="rgba(255,255,255,0.15)" stroke-width="2"
+              stroke-dasharray="5,5" />
+            <line x1="50%" y1="50%" x2="80%" y2="30%" stroke="rgba(255,255,255,0.15)" stroke-width="2"
+              stroke-dasharray="5,5" />
+            <line x1="50%" y1="50%" x2="75%" y2="80%" stroke="rgba(255,255,255,0.15)" stroke-width="2"
+              stroke-dasharray="5,5" />
+            <line x1="50%" y1="50%" x2="25%" y2="75%" stroke="rgba(255,255,255,0.15)" stroke-width="2"
+              stroke-dasharray="5,5" />
+
+          </svg>
+
+          <!-- Center Node: The User -->
+          <div
+            class="absolute z-20 w-24 h-24 bg-white rounded-full shadow-[0_0_40px_rgba(255,255,255,0.2)] flex items-center justify-center text-4xl text-black animate-float">
+            <i class="fa fa-building"></i>
+          </div>
+
+          <!-- Orbit Rings -->
+          <div
+            class="absolute w-[300px] h-[300px] rounded-full border border-white/5 animate-[spin_40s_linear_infinite]">
+          </div>
+          <div
+            class="absolute w-[450px] h-[450px] rounded-full border border-white/5 border-dashed animate-[spin_60s_linear_infinite_reverse]">
+          </div>
+
+          <!-- Campus Nodes -->
+          <!-- Home Campus -->
+          <div
+            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-brand-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg top-[15%] left-[10%] animate-float"
+            style="animation-delay: 1s;">
+            <div class="w-3 h-3 rounded-full bg-brand-500"></div>
+            <span class="text-sm font-bold text-white">Home Campus</span>
+          </div>
+          <!-- Partner Campus A -->
+          <div
+            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-nexo-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg top-[25%] right-[10%] animate-float"
+            style="animation-delay: 2s;">
+            <i class="fa-solid fa-store text-nexo-400"></i>
+            <span class="text-sm font-bold text-white">Partner Cafe</span>
+          </div>
+          <!-- Partner Campus B -->
+          <div
+            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-white/20 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[15%] right-[0%] animate-float"
+            style="animation-delay: 0.5s;">
+            <i class="fa fa-shopping-basket text-zinc-400"></i>
+            <span class="text-sm font-bold text-white">Partner Stores</span>
+          </div>
+          <div
+            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-white/20 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[40%] right-[0%] animate-float"
+            style="animation-delay: 1.5s;">
+            <i class="fa fa-tags text-zinc-400"></i>
+            <span class="text-sm font-bold text-white">Marketplace</span>
+          </div>
+          <!-- Postal Hub (Isolated) -->
+          <div
+            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-postal-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[20%] left-[15%] animate-float opacity-50"
+            style="animation-delay: 1.5s;">
+            <i class="fa-solid fa-lock text-postal-400 text-xs"></i>
+            <span class="text-sm font-bold text-postal-300">Local Postal Hub</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="contact" class="py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-brand-900/10"></div>
+    <div
+      class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent">
+    </div>
+
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 relative z-10 text-center reveal">
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Upgrade Your Campus?</h2>
+      <p class="text-zinc-400 text-lg mb-10">
+        Join the ecosystem that is transforming how campuses operate, connect, and thrive. Schedule a specialized demo
+        for your institution today.
+      </p>
+
+      <div id="demo-form-container"
+        class="glass p-2 rounded-2xl flex flex-col sm:flex-row shadow-2xl border border-white/10 max-w-xl mx-auto transition-all duration-500">
+        <input type="email" id="email-input" placeholder="Enter your work email"
+          class="bg-transparent border-none outline-none text-white px-6 py-4 flex-grow placeholder-zinc-500" required>
+        <button type="button" id="submit-demo"
+          class="bg-white text-black font-bold rounded-xl px-8 py-3 mt-2 sm:mt-0 hover:bg-zinc-200 transition-colors flex items-center justify-center">
+          Request Demo
+        </button>
+      </div>
+
+      <!-- Custom Notification Message (Replaces alert) -->
+      <div id="success-message"
+        class="hidden mt-6 p-4 rounded-xl bg-brand-500/20 border border-brand-500/30 text-brand-300 text-sm font-medium transition-all duration-300">
+        <i class="fa-solid fa-check-circle mr-2"></i> Demo request received! Our team will contact you shortly.
+      </div>
+
+      <p class="text-xs text-zinc-600 mt-6">No credit card required. We'll set up a tailored presentation.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-bg border-t border-white/5 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <a href="#" class="flex items-center gap-2 mb-6">
+            <div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-white font-bold">
+              <img class="w-8 h-8" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
+            </div>
+            <span class="font-display font-bold text-xl text-white tracking-tight">Campus Hub</span>
+          </a>
+          <p class="text-zinc-500 text-sm mb-6 leading-relaxed">The unified operating system for modern campuses.
+            Connecting services, spaces, and students.</p>
+          <div class="flex space-x-4">
+            <!--
+            <button type="button"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all"
+              aria-label="Twitter Action">
+              <i class="fa-brands fa-twitter"></i>
+            </button>
+            <button type="button"
+              class="w-10 h-10 rounded-full glass flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all"
+              aria-label="Twitter Action">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+            -->
+
+
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 font-display">Ecosystem</h4>
+          <ul class="space-y-3 text-sm text-zinc-400">
+            <li><a href="#" class="hover:text-white transition-colors">Campus Hub app</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Postal Management System</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Nexo POS</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Developer API</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 font-display">Solutions</h4>
+          <ul class="space-y-3 text-sm text-zinc-400">
+            <li><a href="#" class="hover:text-white transition-colors">For Universities</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">For Retailers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">For Student Unions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 font-display">About Us</h4>
+          <ul class="space-y-3 text-sm text-zinc-400">
+            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Policies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <!-- Wrapped in a div to keep them stacked together -->
+        <div class="flex flex-col text-center md:text-left">
+          <p class="text-zinc-600 text-sm">© 2026 Campus Hub. All rights reserved.</p>
+          <a href="https://dev.qimlab.my"
+            class="text-zinc-600 text-xs mt-1 hover:text-zinc-400 transition-colors">dev.qimlab (Qim
+            Lab Enterprise)</a>
+
+        </div>
+
+        <div
+          class="flex items-center gap-2 text-sm text-zinc-500 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
+          <div class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></div>
+          All Systems Operational
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    mobileMenuBtn.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        // Small delay to allow display properties to apply before changing opacity for transition
+        setTimeout(() => {
+          mobileMenu.classList.remove('opacity-0');
+        }, 10);
+      } else {
+        mobileMenu.classList.add('opacity-0');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+        }, 300); // Matches transition duration
+      }
+    });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Close mobile menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('opacity-0');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+        }, 300);
+      });
+    });
 
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        nav.classList.add('bg-bg/80', 'backdrop-blur-md', 'border-b', 'border-white/5');
+      } else {
+        nav.classList.remove('bg-bg/80', 'backdrop-blur-md', 'border-b', 'border-white/5');
+      }
+    });
+
+    // Intersection Observer for scroll animations
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOptions = {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+      revealOnScroll.observe(el);
+    });
+
+    // Form submission handler (Replaces native alert)
+    const submitBtn = document.getElementById('submit-demo');
+    const emailInput = document.getElementById('email-input');
+    const successMessage = document.getElementById('success-message');
+    const formContainer = document.getElementById('demo-form-container');
+
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (emailInput.value.trim() === '') {
+        // Flash border red if empty
+        formContainer.classList.add('border-red-500/50');
+        setTimeout(() => formContainer.classList.remove('border-red-500/50'), 1000);
+        return;
+      }
+
+      // Show success UI
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        formContainer.style.display = 'none';
+        successMessage.classList.remove('hidden');
+      }, 800);
+    });
+  </script>
 </body>
 
 </html>

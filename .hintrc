@@ -9,6 +9,15 @@
         "html-has-lang": "off"
       }
     ],
-    "meta-viewport": "off"
-  }
+    "meta-viewport": "off",
+    "no-inline-styles": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not chrome <= 109",
+    "not ios_saf <= 26.4",
+    "not safari <= 26.4",
+    "not samsung <= 29"
+  ]
 }
