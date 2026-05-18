@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 
 <head>
   <meta charset="utf-8">
@@ -91,24 +91,25 @@
 
 </head>
 
-<body class="antialiased relative selection:bg-brand-500 selection:text-white">
+<body class="antialiased relative selection:bg-brand-500 selection:text-white overflow-x-hidden">
 
   <!-- Ambient Background Lighting -->
   <div class="fixed inset-0 bg-grid z-[-2] pointer-events-none"></div>
-  <div class="glow-blob bg-brand-500 w-[600px] h-[600px] top-[-20%] left-[-10%]"></div>
-  <div class="glow-blob bg-nexo-500 w-[500px] h-[500px] bottom-[10%] right-[-10%]"></div>
-  <div class="glow-blob bg-postal-500 w-[400px] h-[400px] top-[40%] left-[20%] opacity-10"></div>
+  <div class="glow-blob bg-brand-500 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] top-[-20%] left-[-10%]"></div>
+  <div class="glow-blob bg-nexo-500 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bottom-[10%] right-[-10%]"></div>
+  <div class="glow-blob bg-postal-500 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] top-[40%] left-[20%] opacity-10">
+  </div>
 
   <!-- Navigation -->
-  <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="glass rounded-2xl px-4 py-3 flex justify-between items-center shadow-lg">
-        <a href="#" class="flex items-center gap-3 group">
+  <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 sm:py-4" id="navbar">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="glass rounded-2xl px-3 sm:px-4 py-3 flex justify-between items-center shadow-lg overflow-hidden">
+        <a href="#" class="flex items-center gap-2 sm:gap-3 group min-w-0 flex-shrink">
           <div
-            class="w-8 h-8 rounded-lg bg-gradient-to-br from-white to-white flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(138,87,204,0.4)]">
+            class="w-8 h-8 flex-shrink-0 rounded-lg bg-gradient-to-br from-white to-white flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(138,87,204,0.4)]">
             <img class="w-8 h-8" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
           </div>
-          <span class="font-display font-bold text-xl text-white tracking-tight">Campus Hub</span>
+          <span class="font-display font-bold text-lg sm:text-xl text-white tracking-tight truncate">Campus Hub</span>
         </a>
 
         <div class="hidden md:flex items-center space-x-8">
@@ -119,32 +120,42 @@
           <a href="#contact" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Contact</a>
         </div>
 
-        <div class="hidden md:block">
+        <div class="hidden md:block flex-shrink-0">
           <a href="#contact"
             class="px-5 py-2.5 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
             Get Started
           </a>
         </div>
 
-        <button id="mobile-menu-btn" class="md:hidden text-zinc-400 hover:text-white focus:outline-none"
-          aria-label="Menu">
-          <i class="fa-solid fa-bars text-xl"></i>
+        <button id="mobile-menu-btn"
+          class="md:hidden flex-shrink-0 ml-2 w-10 h-10 flex items-center justify-center rounded-xl text-zinc-400 hover:text-white hover:bg-white/10 transition-colors focus:outline-none"
+          aria-label="Toggle Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars text-lg" id="menu-icon"></i>
         </button>
       </div>
 
       <!-- Mobile Menu Dropdown -->
       <div id="mobile-menu"
-        class="hidden md:hidden mt-2 glass rounded-2xl p-4 flex-col space-y-2 shadow-lg border border-white/5 opacity-0 transition-opacity duration-300">
+        class="hidden md:hidden mt-2 glass rounded-2xl p-3 flex-col space-y-1 shadow-xl border border-white/5 opacity-0 transition-all duration-300">
         <a href="#ecosystem"
-          class="text-sm font-medium text-zinc-400 hover:text-white transition-colors block px-2 py-2 rounded-lg hover:bg-white/5">Ecosystem</a>
+          class="text-sm font-medium text-zinc-300 hover:text-white transition-colors flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5">
+          <i class="fa-solid fa-cubes text-brand-500 w-4 text-center"></i>
+          Ecosystem
+        </a>
         <a href="#cross-campus"
-          class="text-sm font-medium text-zinc-400 hover:text-white transition-colors block px-2 py-2 rounded-lg hover:bg-white/5">Cross-Campus
-          Roaming</a>
+          class="text-sm font-medium text-zinc-300 hover:text-white transition-colors flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5">
+          <i class="fa-solid fa-network-wired text-nexo-500 w-4 text-center"></i>
+          Cross-Campus Roaming
+        </a>
         <a href="#contact"
-          class="text-sm font-medium text-zinc-400 hover:text-white transition-colors block px-2 py-2 rounded-lg hover:bg-white/5">Contact</a>
-        <div class="pt-2 mt-2 border-t border-white/10">
+          class="text-sm font-medium text-zinc-300 hover:text-white transition-colors flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5">
+          <i class="fa-solid fa-envelope text-postal-500 w-4 text-center"></i>
+          Contact
+        </a>
+        <div class="pt-2 mt-1 border-t border-white/10">
           <a href="#contact"
-            class="px-5 py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition-all text-center block shadow-md">
+            class="py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition-all text-center flex items-center justify-center gap-2 shadow-md">
+            <i class="fa-solid fa-rocket text-xs"></i>
             Get Started
           </a>
         </div>
@@ -154,7 +165,7 @@
 
   <!-- Hero Section -->
   <section
-    class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex flex-col items-center justify-center min-h-[90vh]">
+    class="relative pt-32 pb-16 sm:pt-40 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex flex-col items-center justify-center min-h-[90vh]">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center w-full">
 
       <div
@@ -166,12 +177,14 @@
         The Campus Operating System
       </div>
 
-      <h1 class="reveal font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 leading-[1.1]">
+      <h1
+        class="reveal font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 leading-[1.1]">
         One Superapp.<br>
         <span class="text-gradient-brand">Endless Possibilities.</span>
       </h1>
 
-      <p class="reveal text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+      <p
+        class="reveal text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light px-2">
         Connect your entire institution. Deliver seamless services, elevate local campus commerce, and redefine the
         student experience with a single interconnected ecosystem.
       </p>
@@ -254,7 +267,7 @@
   </div>
 
   <!-- Ecosystem Bento Grid Section -->
-  <section id="ecosystem" class="py-32 relative">
+  <section id="ecosystem" class="py-16 sm:py-24 lg:py-32 relative">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="reveal text-center max-w-3xl mx-auto mb-20">
         <h2 class="font-display text-3xl md:text-5xl font-bold mb-6">The <span class="text-white">Interconnected</span>
@@ -373,9 +386,10 @@
   </section>
 
   <!-- Cross-Campus Section -->
-  <section id="cross-campus" class="py-32 border-y border-white/5 bg-zinc-900/20 relative overflow-hidden">
+  <section id="cross-campus"
+    class="py-16 sm:py-24 lg:py-32 border-y border-white/5 bg-zinc-900/20 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
         <!-- Text Content -->
         <div class="reveal order-2 lg:order-1">
@@ -429,7 +443,8 @@
         </div>
 
         <!-- Network Visual Representation -->
-        <div class="reveal order-1 lg:order-2 relative h-[500px] flex items-center justify-center w-full">
+        <div
+          class="reveal order-1 lg:order-2 relative h-[340px] sm:h-[420px] lg:h-[500px] flex items-center justify-center w-full overflow-hidden">
           <div
             class="absolute inset-0 bg-gradient-to-tr from-brand-500/10 to-nexo-500/10 rounded-full blur-3xl opacity-50">
           </div>
@@ -455,46 +470,46 @@
 
           <!-- Orbit Rings -->
           <div
-            class="absolute w-[300px] h-[300px] rounded-full border border-white/5 animate-[spin_40s_linear_infinite]">
+            class="absolute w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] rounded-full border border-white/5 animate-[spin_40s_linear_infinite]">
           </div>
           <div
-            class="absolute w-[450px] h-[450px] rounded-full border border-white/5 border-dashed animate-[spin_60s_linear_infinite_reverse]">
+            class="absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] rounded-full border border-white/5 border-dashed animate-[spin_60s_linear_infinite_reverse]">
           </div>
 
           <!-- Campus Nodes -->
           <!-- Home Campus -->
           <div
-            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-brand-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg top-[15%] left-[10%] animate-float"
+            class="absolute z-10 w-auto px-3 h-10 bg-surface border border-brand-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg top-[12%] left-[5%] animate-float"
             style="animation-delay: 1s;">
-            <div class="w-3 h-3 rounded-full bg-brand-500"></div>
-            <span class="text-sm font-bold text-white">Home Campus</span>
+            <div class="w-2.5 h-2.5 rounded-full bg-brand-500 flex-shrink-0"></div>
+            <span class="text-xs sm:text-sm font-bold text-white whitespace-nowrap">Home Campus</span>
           </div>
           <!-- Partner Campus A -->
           <div
-            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-nexo-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg top-[25%] right-[10%] animate-float"
+            class="absolute z-10 w-auto px-3 h-10 bg-surface border border-nexo-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg top-[22%] right-[3%] animate-float"
             style="animation-delay: 2s;">
-            <i class="fa-solid fa-store text-nexo-400"></i>
-            <span class="text-sm font-bold text-white">Partner Cafe</span>
+            <i class="fa-solid fa-store text-nexo-400 text-xs flex-shrink-0"></i>
+            <span class="text-xs sm:text-sm font-bold text-white whitespace-nowrap">Partner Cafe</span>
           </div>
-          <!-- Partner Campus B -->
+          <!-- Partner Stores -->
           <div
-            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-white/20 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[15%] right-[0%] animate-float"
+            class="absolute z-10 w-auto px-3 h-10 bg-surface border border-white/20 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[12%] right-[3%] animate-float"
             style="animation-delay: 0.5s;">
-            <i class="fa fa-shopping-basket text-zinc-400"></i>
-            <span class="text-sm font-bold text-white">Partner Stores</span>
+            <i class="fa fa-shopping-basket text-zinc-400 text-xs flex-shrink-0"></i>
+            <span class="text-xs sm:text-sm font-bold text-white whitespace-nowrap">Partner Stores</span>
           </div>
           <div
-            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-white/20 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[40%] right-[0%] animate-float"
+            class="absolute z-10 w-auto px-3 h-10 bg-surface border border-white/20 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[38%] right-[3%] animate-float"
             style="animation-delay: 1.5s;">
-            <i class="fa fa-tags text-zinc-400"></i>
-            <span class="text-sm font-bold text-white">Marketplace</span>
+            <i class="fa fa-tags text-zinc-400 text-xs flex-shrink-0"></i>
+            <span class="text-xs sm:text-sm font-bold text-white whitespace-nowrap">Marketplace</span>
           </div>
           <!-- Postal Hub (Isolated) -->
           <div
-            class="absolute z-10 w-auto px-4 h-12 bg-surface border border-postal-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[20%] left-[15%] animate-float opacity-50"
+            class="absolute z-10 w-auto px-3 h-10 bg-surface border border-postal-500/50 rounded-full flex items-center justify-center gap-2 shadow-lg bottom-[18%] left-[5%] animate-float opacity-50"
             style="animation-delay: 1.5s;">
-            <i class="fa-solid fa-lock text-postal-400 text-xs"></i>
-            <span class="text-sm font-bold text-postal-300">Local Postal Hub</span>
+            <i class="fa-solid fa-lock text-postal-400 text-xs flex-shrink-0"></i>
+            <span class="text-xs sm:text-sm font-bold text-postal-300 whitespace-nowrap">Local Postal Hub</span>
           </div>
         </div>
 
@@ -503,7 +518,7 @@
   </section>
 
   <!-- Call to Action -->
-  <section id="contact" class="py-32 relative overflow-hidden">
+  <section id="contact" class="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
     <div class="absolute inset-0 bg-brand-900/10"></div>
     <div
       class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent">
@@ -519,9 +534,10 @@
       <div id="demo-form-container"
         class="glass p-2 rounded-2xl flex flex-col sm:flex-row shadow-2xl border border-white/10 max-w-xl mx-auto transition-all duration-500">
         <input type="email" id="email-input" placeholder="Enter your work email"
-          class="bg-transparent border-none outline-none text-white px-6 py-4 flex-grow placeholder-zinc-500" required>
+          class="bg-transparent border-none outline-none text-white px-4 sm:px-6 py-4 flex-grow placeholder-zinc-500 min-w-0"
+          required>
         <button type="button" id="submit-demo"
-          class="bg-white text-black font-bold rounded-xl px-8 py-3 mt-2 sm:mt-0 hover:bg-zinc-200 transition-colors flex items-center justify-center">
+          class="bg-white text-black font-bold rounded-xl px-6 py-3 mt-2 sm:mt-0 hover:bg-zinc-200 transition-colors flex items-center justify-center flex-shrink-0">
           Request Demo
         </button>
       </div>
@@ -539,8 +555,8 @@
   <!-- Footer -->
   <footer class="bg-bg border-t border-white/5 pt-20 pb-10">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        <div class="col-span-1 md:col-span-1">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-16">
+        <div class="col-span-2 md:col-span-1">
           <a href="#" class="flex items-center gap-2 mb-6">
             <div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-white font-bold">
               <img class="w-8 h-8" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
@@ -619,34 +635,42 @@
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      setTimeout(() => {
+        mobileMenu.classList.remove('opacity-0');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      }, 10);
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('opacity-0');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      menuIcon.classList.remove('fa-xmark');
+      menuIcon.classList.add('fa-bars');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      }, 300);
+    }
 
     mobileMenuBtn.addEventListener('click', () => {
       if (mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.classList.add('flex');
-        // Small delay to allow display properties to apply before changing opacity for transition
-        setTimeout(() => {
-          mobileMenu.classList.remove('opacity-0');
-        }, 10);
+        openMenu();
       } else {
-        mobileMenu.classList.add('opacity-0');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.classList.remove('flex');
-        }, 300); // Matches transition duration
+        closeMenu();
       }
     });
 
     // Close mobile menu when a link is clicked
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('opacity-0');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.classList.remove('flex');
-        }, 300);
-      });
+      link.addEventListener('click', () => closeMenu());
     });
 
     // Navbar Scroll Effect
