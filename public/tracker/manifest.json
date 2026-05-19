@@ -1,21 +1,21 @@
 {
-    "name": "Campus Hub | Parcel Tracker Mini App",
-    "short_name": "Campus Hub | Mini App",
+    "name": "Campus Hub | Parcel Tracker",
+    "short_name": "Campus Hub | Tracker",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "Campus Hub | Parcel Tracker Mini App system",
+    "background_color": "#0a0a0a",
+    "theme_color": "#5c3a91",
+    "description": "Campus Hub | Parcel Tracker Mini App",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/icon-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
