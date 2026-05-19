@@ -1,33 +1,301 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Not Found</title>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
-      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Campus Hub – 404 Page Not Found</title>
+  <meta content="The page you're looking for doesn't exist. Return to Campus Hub at campushub.my." name="description">
+  <meta content="Campus Hub, 404, page not found, error" name="keywords">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://campushub.my">
+
+  <!-- Social Media Tags -->
+  <meta property="og:title" content="Campus Hub – 404 Page Not Found">
+  <meta property="og:description" content="The page you're looking for doesn't exist. Visit campushub.my.">
+  <meta property="og:image" content="https://campushub.my/assets/img/logo/icon-512.png">
+  <meta property="og:url" content="https://campushub.my">
+  <meta property="og:type" content="website">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo/icon-512.png" rel="icon">
+  <link href="assets/img/logo/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              900: '#134e4a',
+            },
+            nexo: {
+              500: '#a855f7',
+            },
+            postal: {
+              500: '#3b82f6',
+            },
+            bg: '#09090b',
+            surface: '#18181b',
+            border: '#27272a'
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+            'glitch': 'glitch 3s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: .4 },
+            },
+            shake: {
+              '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+              '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+              '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+              '40%, 60%': { transform: 'translate3d(4px, 0, 0)' },
+            },
+            glitch: {
+              '0%, 100%': { clipPath: 'inset(0 0 100% 0)', transform: 'translateX(0)' },
+              '5%': { clipPath: 'inset(10% 0 85% 0)', transform: 'translateX(-4px)' },
+              '10%': { clipPath: 'inset(40% 0 50% 0)', transform: 'translateX(4px)' },
+              '15%': { clipPath: 'inset(80% 0 10% 0)', transform: 'translateX(-2px)' },
+              '20%': { clipPath: 'inset(0 0 100% 0)', transform: 'translateX(0)' },
+            }
+          }
+        }
       }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>404</h2>
-      <h1>Page Not Found</h1>
-      <p>The specified file was not found on this website. Please check the URL for mistakes and try again.</p>
-      <h3>Why am I seeing this?</h3>
-      <p>This page was generated by the Firebase Command-Line Interface. To modify it, edit the <code>404.html</code> file in your project's configured <code>public</code> directory.</p>
+    }
+  </script>
+
+  <style>
+    /* Glitch text effect */
+    .glitch-container {
+      position: relative;
+    }
+
+    .glitch-container::before,
+    .glitch-container::after {
+      content: attr(data-text);
+      position: absolute;
+      inset: 0;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      pointer-events: none;
+    }
+
+    .glitch-container::before {
+      color: #2dd4bf;
+      animation: glitch-before 3s infinite;
+      clip-path: inset(0 0 100% 0);
+    }
+
+    .glitch-container::after {
+      color: #a855f7;
+      animation: glitch-after 3s infinite 0.1s;
+      clip-path: inset(0 0 100% 0);
+    }
+
+    @keyframes glitch-before {
+
+      0%,
+      100% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+      }
+
+      5% {
+        clip-path: inset(10% 0 80% 0);
+        transform: translateX(-4px);
+      }
+
+      10% {
+        clip-path: inset(55% 0 30% 0);
+        transform: translateX(3px);
+      }
+
+      15% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translateX(-2px);
+      }
+
+      20% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes glitch-after {
+
+      0%,
+      100% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+      }
+
+      5% {
+        clip-path: inset(30% 0 60% 0);
+        transform: translateX(4px);
+      }
+
+      10% {
+        clip-path: inset(65% 0 20% 0);
+        transform: translateX(-3px);
+      }
+
+      15% {
+        clip-path: inset(5% 0 90% 0);
+        transform: translateX(2px);
+      }
+
+      20% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body class="antialiased relative selection:bg-brand-500 selection:text-white overflow-x-hidden bg-bg text-white">
+
+  <!-- Ambient Background Lighting -->
+  <div class="fixed inset-0 bg-grid z-[-2] pointer-events-none"></div>
+  <div class="glow-blob bg-nexo-500 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] top-[-20%] right-[-10%]"></div>
+  <div class="glow-blob bg-postal-500 w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] bottom-[10%] left-[-10%]"></div>
+  <div class="glow-blob bg-brand-500 w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] top-[50%] left-[40%] opacity-10">
+  </div>
+
+  <!-- 404 Error – Main Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-screen px-6 text-center">
+    <div class="max-w-xl mx-auto relative z-10">
+
+
+
+      <!-- Error Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-nexo-500/30 text-nexo-500 text-xs font-semibold uppercase tracking-widest mb-6">
+        <i class="fa-solid fa-triangle-exclamation text-[10px]"></i>
+        Error 404
+      </div>
+
+      <!-- Big 404 Glitch Number -->
+      <div class="relative mb-4">
+        <p class="glitch-container font-display text-[7rem] sm:text-[9rem] md:text-[11rem] font-bold tracking-tighter leading-none text-white select-none"
+          data-text="404">
+          404
+        </p>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter mb-4 leading-tight">
+        Page <span class="text-gradient-brand">Not Found</span>
+      </h1>
+
+      <!-- Body text -->
+      <p class="text-zinc-400 text-lg mb-4 leading-relaxed">
+        Oops! The page you're looking for doesn't exist<br>
+        or has been moved to a different location.
+      </p>
+      <p class="text-zinc-500 text-sm mb-10">
+        The URL might be misspelled, or the page may have been removed.
+      </p>
+
+      <!-- Info Card -->
+      <div
+        class="glass border border-white/10 rounded-2xl px-6 py-4 mb-8 inline-flex items-center gap-3 shadow-xl mx-auto">
+        <i class="fa-solid fa-compass text-nexo-500 text-lg"></i>
+        <span class="font-mono text-zinc-300 font-semibold text-sm tracking-tight">
+          <span id="current-path" class="text-white">/unknown</span>
+        </span>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://campushub.my" id="home-btn"
+          class="bg-white text-black px-8 py-4 rounded-xl font-semibold text-base transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2">
+          <i class="fa-solid fa-house"></i>
+          Go to Homepage
+        </a>
+        <button onclick="history.back()" id="back-btn"
+          class="glass text-white px-8 py-4 rounded-xl font-semibold text-base transition-all hover:bg-white/10 flex items-center justify-center gap-2 border border-white/10 cursor-pointer">
+          <i class="fa-solid fa-arrow-left text-brand-400"></i>
+          Go Back
+        </button>
+      </div>
+
     </div>
-  </body>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-bg border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex flex-col text-center md:text-left">
+          <p class="text-zinc-600 text-sm">© <span id="year">2026</span> Campus Hub. All rights reserved.</p>
+          <a href="https://dev.qimlab.my" class="text-zinc-600 text-xs mt-1 hover:text-zinc-400 transition-colors">A
+            project by Qim Lab Dev (Qim Lab Enterprise)</a>
+        </div>
+
+        <div
+          class="flex items-center gap-2 text-sm text-zinc-500 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
+          <div class="w-2 h-2 rounded-full bg-nexo-500 animate-pulse"></div>
+          Error 404 – Page Not Found
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Display the current path that caused the 404
+    const pathEl = document.getElementById('current-path');
+    if (pathEl) {
+      const path = window.location.pathname || '/unknown';
+      pathEl.textContent = path;
+    }
+
+    // Set dynamic copyright year
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  </script>
+
+</body>
+
 </html>
