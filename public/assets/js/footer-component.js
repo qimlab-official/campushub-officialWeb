@@ -71,11 +71,7 @@ const footerContent = `
 
         </div>
 
-        <div
-          class="flex items-center gap-2 text-sm text-zinc-500 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
-          <div class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></div>
-          All Systems Operational
-        </div>
+       
       </div>
     </div>
   </footer>
@@ -92,10 +88,10 @@ const footerContent = `
 `;
 
 class GlobalFooter extends HTMLElement {
-    connectedCallback() {
-        this.style.display = 'block';
-        this.innerHTML = footerContent;
-    }
+  connectedCallback() {
+    this.style.display = 'block';
+    this.innerHTML = footerContent;
+  }
 }
 
 customElements.define('global-footer', GlobalFooter);
