@@ -67,7 +67,7 @@ const footerContent = `
         <!-- Wrapped in a div to keep them stacked together -->
         <div class="flex flex-col text-center md:text-left">
           <p class="text-zinc-600 text-sm">© <span id="year">2026</span> Campus Hub Project. All rights reserved.</p>
-          <a href="https://dev.qimlab..com.my" class="text-zinc-600 text-xs mt-1 hover:text-zinc-400 transition-colors">by Qim Lab DEV (Qim Lab Enterprise)</a>
+          <a href="https://studio.qimlab.com.my" class="text-zinc-600 text-xs mt-1 hover:text-zinc-400 transition-colors">by QL Studio</a>
 
         </div>
 
