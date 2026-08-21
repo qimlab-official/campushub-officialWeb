@@ -205,10 +205,7 @@
                     handleResetPassword(auth, oobCode);
                     break;
                 case 'verifyEmail':
-                    handleVerifyEmail(auth, oobCode, false);
-                    break;
-                case 'verifyAndChangeEmail':
-                    handleVerifyEmail(auth, oobCode, true);
+                    handleVerifyEmail(auth, oobCode);
                     break;
                 case 'recoverEmail':
                     handleRecoverEmail(auth, oobCode);
@@ -270,18 +267,13 @@
             }
         }
 
-        // --- HANDLER: Email Verification & Email Change ---
-        async function handleVerifyEmail(auth, oobCode, isEmailChange = false) {
+        // --- HANDLER: Email Verification ---
+        async function handleVerifyEmail(auth, oobCode) {
             try {
                 await applyActionCode(auth, oobCode);
 
-                if (isEmailChange) {
-                    document.getElementById('success-title').textContent = "Email Updated!";
-                    document.getElementById('success-message').textContent = "Your email address has been successfully updated and verified.";
-                } else {
-                    document.getElementById('success-title').textContent = "Email Verified!";
-                    document.getElementById('success-message').textContent = "Thank you for verifying your email address. Your account is now fully active.";
-                }
+                document.getElementById('success-title').textContent = "Email Verified!";
+                document.getElementById('success-message').textContent = "Thank you for verifying your email address. Your account is now fully active.";
                 document.getElementById('success-action-btn').href = continueUrl;
 
                 showState(elSuccess);
