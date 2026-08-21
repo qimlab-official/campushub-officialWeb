@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub - Account Action</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between items-center p-4 selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Logo -->
+    <header class="w-full max-w-md pt-8 pb-4 text-center">
+        <a href="https://campushub.my"
+            class="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-white hover:opacity-90 transition-opacity">
+            <div
+                class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center shadow-lg shadow-brand-500/30">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+            </div>
+            <span>Campus<span class="text-brand-500">Hub</span></span>
+        </a>
+    </header>
+
+    <!-- Main Container Card -->
+    <main class="w-full max-w-md my-auto">
+        <div class="bg-slate-800/80 backdrop-blur-xl border border-slate-700/60 rounded-2xl p-6 sm:p-8 shadow-2xl">
+
+            <!-- STATE 1: LOADING -->
+            <div id="state-loading" class="text-center py-8">
+                <div
+                    class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-brand-500 border-t-transparent mb-4">
+                </div>
+                <h2 class="text-xl font-semibold text-white">Verifying action link...</h2>
+                <p class="text-slate-400 text-sm mt-1">Please wait a moment while we process your request.</p>
+            </div>
+
+            <!-- STATE 2: RESET PASSWORD FORM -->
+            <div id="state-reset-password" class="hidden">
+                <div class="mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-brand-500/10 text-brand-500 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white">Reset Password</h2>
+                    <p class="text-slate-400 text-sm mt-1">For account <span id="reset-email"
+                            class="font-medium text-slate-200"></span></p>
+                </div>
+
+                <form id="reset-password-form" class="space-y-4">
+                    <div>
+                        <label for="new-password"
+                            class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">New
+                            Password</label>
+                        <div class="relative">
+                            <input type="password" id="new-password" required minlength="6"
+                                class="w-full bg-slate-900/80 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                                placeholder="Enter new password">
+                            <button type="button" id="toggle-password"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="form-error"
+                        class="hidden p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm"></div>
+
+                    <button type="submit" id="btn-submit-reset"
+                        class="w-full bg-brand-600 hover:bg-brand-500 text-white font-medium py-3 rounded-lg shadow-lg shadow-brand-600/20 transition-all flex items-center justify-center gap-2">
+                        <span>Save New Password</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- STATE 3: SUCCESS STATE -->
+            <div id="state-success" class="hidden text-center py-4">
+                <div
+                    class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <h2 id="success-title" class="text-2xl font-bold text-white mb-2">Success!</h2>
+                <p id="success-message" class="text-slate-300 text-sm mb-6">Your request has been processed
+                    successfully.</p>
+                <a id="success-action-btn" href="https://campushub.my"
+                    class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 rounded-lg transition-colors">
+                    Continue to CampusHub
+                </a>
+            </div>
+
+            <!-- STATE 4: ERROR STATE -->
+            <div id="state-error" class="hidden text-center py-4">
+                <div
+                    class="w-16 h-16 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-2">Action Failed</h2>
+                <p id="error-message" class="text-slate-400 text-sm mb-6">This action link is invalid, expired, or has
+                    already been used.</p>
+                <a href="https://campushub.my"
+                    class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 rounded-lg transition-colors">
+                    Back to CampusHub
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-md py-6 text-center text-xs text-slate-500">
+        &copy; <span id="year"></span> CampusHub. All rights reserved.
+    </footer>
+
+    <!-- Firebase SDK Modules -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import {
+            getAuth,
+            verifyPasswordResetCode,
+            confirmPasswordReset,
+            applyActionCode,
+            checkActionCode
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 1. Get Parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const mode = urlParams.get('mode');
+        const oobCode = urlParams.get('oobCode');
+        const apiKey = urlParams.get('apiKey');
+        const continueUrl = urlParams.get('continueUrl') || 'https://campushub.my';
+
+        // Elements
+        const elLoading = document.getElementById('state-loading');
+        const elReset = document.getElementById('state-reset-password');
+        const elSuccess = document.getElementById('state-success');
+        const elError = document.getElementById('state-error');
+        const elErrorMessage = document.getElementById('error-message');
+
+        function showState(element) {
+            [elLoading, elReset, elSuccess, elError].forEach(el => el.classList.add('hidden'));
+            element.classList.remove('hidden');
+        }
+
+        // Validate basic query parameters
+        if (!mode || !oobCode || !apiKey) {
+            elErrorMessage.textContent = "Invalid URL parameters. Please check the link from your email.";
+            showState(elError);
+        } else {
+            // Initialize Firebase with the API Key provided in URL query parameter
+            const firebaseConfig = { apiKey: apiKey };
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+
+            // Process based on Mode
+            switch (mode) {
+                case 'resetPassword':
+                    handleResetPassword(auth, oobCode);
+                    break;
+                case 'verifyEmail':
+                    handleVerifyEmail(auth, oobCode, false);
+                    break;
+                case 'verifyAndChangeEmail':
+                    handleVerifyEmail(auth, oobCode, true);
+                    break;
+                case 'recoverEmail':
+                    handleRecoverEmail(auth, oobCode);
+                    break;
+                default:
+                    elErrorMessage.textContent = "Unsupported action mode.";
+                    showState(elError);
+            }
+        }
+
+        // --- HANDLER: Password Reset ---
+        async function handleResetPassword(auth, oobCode) {
+            try {
+                // Verify the password reset code first to get user's email
+                const email = await verifyPasswordResetCode(auth, oobCode);
+                document.getElementById('reset-email').textContent = email;
+                showState(elReset);
+
+                // Password visibility toggle
+                const pwdInput = document.getElementById('new-password');
+                document.getElementById('toggle-password').addEventListener('click', () => {
+                    pwdInput.type = pwdInput.type === 'password' ? 'text' : 'password';
+                });
+
+                // Submit handler
+                const resetForm = document.getElementById('reset-password-form');
+                const formError = document.getElementById('form-error');
+                const submitBtn = document.getElementById('btn-submit-reset');
+
+                resetForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    formError.classList.add('hidden');
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = `
+                        <div class="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+                        <span>Saving...</span>
+                    `;
+
+                    try {
+                        await confirmPasswordReset(auth, oobCode, pwdInput.value);
+
+                        document.getElementById('success-title').textContent = "Password Changed!";
+                        document.getElementById('success-message').textContent = "Your password has been successfully updated. You can now log in with your new password.";
+                        document.getElementById('success-action-btn').href = continueUrl;
+                        document.getElementById('success-action-btn').textContent = "Proceed to Login";
+
+                        showState(elSuccess);
+                    } catch (err) {
+                        formError.textContent = getFriendlyErrorMessage(err.code);
+                        formError.classList.remove('hidden');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = `<span>Save New Password</span>`;
+                    }
+                });
+
+            } catch (err) {
+                elErrorMessage.textContent = getFriendlyErrorMessage(err.code);
+                showState(elError);
+            }
+        }
+
+        // --- HANDLER: Email Verification & Email Change ---
+        async function handleVerifyEmail(auth, oobCode, isEmailChange = false) {
+            try {
+                await applyActionCode(auth, oobCode);
+
+                if (isEmailChange) {
+                    document.getElementById('success-title').textContent = "Email Updated!";
+                    document.getElementById('success-message').textContent = "Your email address has been successfully updated and verified.";
+                } else {
+                    document.getElementById('success-title').textContent = "Email Verified!";
+                    document.getElementById('success-message').textContent = "Thank you for verifying your email address. Your account is now fully active.";
+                }
+                document.getElementById('success-action-btn').href = continueUrl;
+
+                showState(elSuccess);
+            } catch (err) {
+                elErrorMessage.textContent = getFriendlyErrorMessage(err.code);
+                showState(elError);
+            }
+        }
+
+        // --- HANDLER: Recover Email ---
+        async function handleRecoverEmail(auth, oobCode) {
+            try {
+                const info = await checkActionCode(auth, oobCode);
+                await applyActionCode(auth, oobCode);
+
+                document.getElementById('success-title').textContent = "Email Restored";
+                document.getElementById('success-message').textContent = `Your account email has been restored to ${info.data.email}. If you didn't request this change, please reset your password immediately.`;
+                document.getElementById('success-action-btn').href = continueUrl;
+
+                showState(elSuccess);
+            } catch (err) {
+                elErrorMessage.textContent = getFriendlyErrorMessage(err.code);
+                showState(elError);
+            }
+        }
+
+        // Friendly Error Messages
+        function getFriendlyErrorMessage(code) {
+            switch (code) {
+                case 'auth/expired-action-code':
+                    return 'This link has expired. Please request a new link.';
+                case 'auth/invalid-action-code':
+                    return 'This link is invalid or has already been used.';
+                case 'auth/user-disabled':
+                    return 'The account associated with this action has been disabled.';
+                case 'auth/user-not-found':
+                    return 'User account not found.';
+                case 'auth/weak-password':
+                    return 'The password is too weak. Please use at least 6 characters.';
+                default:
+                    return 'An unexpected error occurred. Please try again.';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+# Cloudflare Pages / Workers Static Assets Rewrites
+/account/*  /account/index.html  200
