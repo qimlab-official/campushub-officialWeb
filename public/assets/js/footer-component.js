@@ -5,7 +5,7 @@ const footerContent = `
         <div class="col-span-2 md:col-span-1">
           <a href="#" class="flex items-center gap-2 mb-6">
             <div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-white font-bold">
-              <img class="w-8 h-8" src="assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
+              <img class="w-8 h-8" src="/assets/img/logo/icon-512.png" alt="Campus Hub Logo" />
             </div>
             <span class="font-display font-bold text-xl text-white tracking-tight">Campus Hub</span>
           </a>
